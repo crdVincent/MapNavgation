@@ -1,0 +1,30 @@
+//
+//  Amap-Prefix.pch
+//  AmapNaviDemo
+//
+//  Created by 陈瑞 on 2017/6/28.
+//  Copyright © 2017年 陈瑞. All rights reserved.
+//
+
+#ifndef Amap_Prefix_pch
+#define Amap_Prefix_pch
+
+#define UIColorFromRGB(rgbValue) [UIColor  colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0  green:((float)((rgbValue & 0xFF00) >> 8))/255.0  blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define  BackColor [UIColor colorWithRed:237/255.0f green:238/255.0f blue:239/255.0f alpha:1]
+#define BaseColor [UIColor colorWithRed:255/255.0f green:77/255.0f blue:98/255.0f alpha:1]
+#define LabelBaseColor [UIColor colorWithRed:51/255.0f green:51/255.0f blue:51/255.0f alpha:1]
+#define SmallLabelColor [UIColor colorWithRed:151/255.0f green:151/255.0f blue:151/255.0f alpha:1]
+#define ButtonBaseColor [UIColor colorWithRed:102/255.0f green:102/255.0f blue:102/255.0f alpha:1]
+#define LineColor [UIColor colorWithRed:244/255.0f green:244/255.0f blue:244/255.0f alpha:1]
+#define PinkColor [UIColor colorWithRed:255/255.0f green:144/255.0f blue:115/255.0f alpha:1]
+#define BigFont   [UIFont systemFontOfSize:ScalePx(30)]
+#define LabelFont [UIFont systemFontOfSize:ScalePx(25)]
+#define BaseFont [UIFont systemFontOfSize:ScalePx(20)]
+
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreeenHeight [UIScreen mainScreen].bounds.size.height
+#define ScalePx(px) ((px) *ScreenWidth/1242*3/2)
+
+#import <SDAutoLayout.h>
+
+#endif /* Amap_Prefix_pch */

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window                                      = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor                      = [UIColor whiteColor];
+    ViewController *rootController = [[ViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:rootController];
+    self.window.rootViewController = nav;
+    [self.window makeKeyWindow];
+
+    
+    [[AMapServices sharedServices] setEnableHTTPS:YES];//开启HTTPS功能
+    [AMapServices sharedServices].apiKey = @"9161fe37fb748dcdf5a768a80170e776";//配置高德地图APPKey
     return YES;
 }
 
